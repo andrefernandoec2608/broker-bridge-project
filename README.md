@@ -6,8 +6,8 @@ Este repositorio agrupa dos aplicaciones independientes —**Producer** y **Cons
 
 ```
 kafka-messaging-system/
-├── producer-service/      # Servicio encargado de enviar mensajes a Kafka
-├── consumer-service/      # Servicio encargado de consumir y procesar los mensajes
+├── broker-bridge-producer/      # Servicio encargado de enviar mensajes a Kafka
+├── broker-bridge-consumer/      # Servicio encargado de consumir y procesar los mensajes
 └── README.md              # Este archivo
 ```
 
@@ -32,7 +32,7 @@ Desde el proyecto de tu elección.
 
 ## 🧭 Cómo usar este repositorio
 
-1. Ingresa al directorio del servicio `producer-service/` o `consumer-service/`
+1. Ingresa al directorio del servicio `broker-bridge-producer/` o `broker-bridge-consumer/`
 2. Sigue las instrucciones en el README de cada uno (cada uno incluye sus endpoints y lógica)
 3. Puedes correrlos de forma independiente o conjunta para probar la interacción vía Kafka
 
