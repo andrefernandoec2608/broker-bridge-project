@@ -1,0 +1,9 @@
+{
+  "eventId": 123,
+  "eventType": "UPDATE",
+  "message": {
+    "messageId": 123,
+    "messageCode": "Gerand000",
+    "messageDescription": "Primer Mensaje"
+  }
+}

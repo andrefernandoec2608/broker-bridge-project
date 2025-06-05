@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: broker-bridge-producer
+  profiles:
+    active: dev
