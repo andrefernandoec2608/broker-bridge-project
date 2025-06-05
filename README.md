@@ -1,55 +1,43 @@
-# 🛰️ Spring Boot & Kafka
+# 🧩 Kafka Messaging System with Spring Boot & Docker
 
-Este proyecto demuestra cómo integrar **Apache Kafka** con **Spring Boot**, utilizando **Docker** para simular un entorno distribuido con múltiples brokers y un Zookeeper.
+Este repositorio agrupa dos aplicaciones independientes —**Producer** y **Consumer**— desarrolladas en **Spring Boot** que interactúan entre sí mediante **Apache Kafka**, utilizando **Docker** para levantar el entorno de mensajería distribuido.
 
-## ⚙️ Tecnologías utilizadas
+## 📦 Contenido del proyecto
 
-- Spring Boot
-- Apache Kafka
-- Docker & Docker Compose
-- JUnit y Mockito (pruebas unitarias e integración)
+```
+kafka-messaging-system/
+├── producer-service/      # Servicio encargado de enviar mensajes a Kafka
+├── consumer-service/      # Servicio encargado de consumir y procesar los mensajes
+└── README.md              # Este archivo
+```
 
-## 🚀 Descripción
+## 🚀 Descripción general
 
-El proyecto expone una serie de **APIs REST** que permiten:
+Este proyecto demuestra la implementación de un sistema de mensajería asíncrona basado en **Kafka**, utilizando buenas prácticas en arquitectura backend. Ambos servicios (Producer y Consumer) están desacoplados, lo que permite escalabilidad, modularidad y pruebas independientes.
 
-- Enviar mensajes a un tópico de Kafka (Productor)
-- Escuchar y procesar mensajes desde el tópico (Consumidor)
-- Simular escenarios reales de comunicación asíncrona con Kafka
+- 🧪 **Pruebas unitarias y de integración** incluidas en ambos servicios
+- 🐳 **Entorno simulado con Docker**, que incluye Zookeeper y múltiples brokers Kafka
+- 🌐 **APIs REST** expuestas en ambos proyectos para facilitar el envío y monitoreo de mensajes
+- 🛠️ **Arquitectura limpia** basada en Spring Boot
 
-Además, incluye pruebas automatizadas para validar el comportamiento del sistema en los distintos puntos de integración.
+## 🐳 Levantar el entorno
 
-## 🐳 Entorno Docker
-
-El entorno se levanta con:
-
-- 🐘 **3 Brokers de Kafka**
-- 🧠 **1 Zookeeper** como coordinador
+Cada subproyecto incluye su propio archivo `docker-compose.yml` o puede conectarse a un entorno Kafka centralizado. Asegúrate de tener Docker instalado y ejecutar:
 
 ```bash
 docker-compose up --build
 ```
 
-Una vez levantado, los servicios Kafka estarán listos para aceptar conexiones desde la aplicación Spring Boot.
+Desde el proyecto de tu elección.
 
-## 📮 API Endpoints
+## 🧭 Cómo usar este repositorio
 
-Ejemplos de endpoints implementados:
-
-| Método | Ruta           | Descripción                        |
-|--------|----------------|------------------------------------|
-| POST   | `/kafka/send`  | Envía un mensaje a un tópico Kafka|
-| GET    | `/kafka/listen`| Verifica el estado del consumidor |
-
-## 🧪 Pruebas
-
-El proyecto contiene:
-
-- Pruebas unitarias de lógica de negocio
-- Pruebas de integración que simulan la comunicación vía Kafka
+1. Ingresa al directorio del servicio `producer-service/` o `consumer-service/`
+2. Sigue las instrucciones en el README de cada uno (cada uno incluye sus endpoints y lógica)
+3. Puedes correrlos de forma independiente o conjunta para probar la interacción vía Kafka
 
 ---
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-André%20Llumiquinga-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/andre-llc/)  
 [![GitHub](https://img.shields.io/badge/GitHub-André%20Llumiquinga-black?style=flat&logo=github)](https://github.com/andrefernandoec2608)
