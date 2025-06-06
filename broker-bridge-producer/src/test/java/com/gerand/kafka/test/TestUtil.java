@@ -6,14 +6,21 @@ import com.gerand.kafka.domain.EventMain;
 import com.gerand.kafka.domain.EventType;
 import com.gerand.kafka.domain.MessageMain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TestUtil {
 
-    public static MessageMain getGenericMessageMain() {
-        return new MessageMain(77001, "GerandTest", "Gerand Test Description");
+    public static List<MessageMain> getGenericMessageMain() {
+        List<MessageMain> lista = new ArrayList<>();
+        lista.add(new MessageMain(77001, "GerandTest", "Gerand Test Description"));
+        return lista;
     }
 
-    public static MessageMain getGenericMessageInvalid() {
-        return new MessageMain(null, "", "Gerand Test Description");
+    public static List<MessageMain> getGenericMessageInvalid() {
+        List<MessageMain> lista = new ArrayList<>();
+        lista.add(new MessageMain(null, "", "Gerand Test Description"));
+        return lista;
     }
 
     public static EventMain getGenericEventMain() {

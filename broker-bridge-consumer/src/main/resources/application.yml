@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: broker-bridge-consumer
+  profiles:
+    active: dev
+server:
+  port: 8081

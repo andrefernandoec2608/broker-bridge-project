@@ -1,4 +1,4 @@
-package com.gernad.kafka.consumer;
+package com.gernad.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
